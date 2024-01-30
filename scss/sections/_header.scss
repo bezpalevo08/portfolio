@@ -1,0 +1,29 @@
+.header {
+}
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20.5px 0;
+}
+.logo {
+    display: inline-block;
+    max-width: 146px;
+}
+.header__menu {
+}
+.header__list {
+    display: flex;
+    column-gap: 64px;
+}
+.header__list-item {
+    // &:not(:last-child) {
+    //     margin-right: 64px;
+    // }
+}
+.anchor-link {
+    color: $colorText;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}

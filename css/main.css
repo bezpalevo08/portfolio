@@ -220,4 +220,33 @@ select:-webkit-autofill:focus {
 /* Sticky Footer */
 .footer {
   margin-top: auto; /* sticky footer */
+}
+
+body {
+  background-color: #1B1A17;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20.5px 0;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 146px;
+}
+
+.header__list {
+  display: flex;
+  column-gap: 64px;
+}
+
+.anchor-link {
+  color: #F0E3CA;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: "Inconsolata", monospace;
 }/*# sourceMappingURL=main.css.map */
