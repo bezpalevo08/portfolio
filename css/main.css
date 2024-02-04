@@ -14,6 +14,7 @@
 /* Links */
 a, a:link, a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -225,6 +226,7 @@ select:-webkit-autofill:focus {
 body {
   background-color: #1B1A17;
   font-family: "Inconsolata", monospace;
+  color: #F0E3CA;
 }
 
 .header__content {
@@ -247,8 +249,16 @@ body {
 }
 
 .anchor-link {
-  color: #F0E3CA;
   font-size: 20px;
   font-weight: 700;
   text-transform: capitalize;
+  transition: color 0.5s;
+}
+.anchor-link:active {
+  color: #3A96EC;
+}
+@media (hover: hover) {
+  .anchor-link:hover {
+    color: #3A96EC;
+  }
 }/*# sourceMappingURL=main.css.map */

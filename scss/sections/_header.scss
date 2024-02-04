@@ -24,8 +24,18 @@
     // }
 }
 .anchor-link {
-    color: $colorText;
     font-size: 20px;
     font-weight: 700;
     text-transform: capitalize;
+    transition: color 0.5s;
+
+    &:active {
+        color: $contextColor;
+    }
+    
+    @media (hover:hover) {
+        &:hover {
+        color: $contextColor;
+        }
+    }
 }
