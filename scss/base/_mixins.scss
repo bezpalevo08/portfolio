@@ -1,0 +1,7 @@
+@mixin hoverLink ($color) {
+    @media (hover:hover) {
+        &:hover {
+            color: $color;
+        }
+    }
+}
