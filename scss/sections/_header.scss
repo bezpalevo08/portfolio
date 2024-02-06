@@ -32,10 +32,7 @@
     &:active {
         color: $contextColor;
     }
+    // здесь должен вызываться миксин
+    @include hoverLink($contextColor);
     
-    @media (hover:hover) {
-        &:hover {
-        color: $contextColor;
-        }
-    }
 }
