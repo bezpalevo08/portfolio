@@ -229,6 +229,31 @@ body {
   color: #F0E3CA;
 }
 
+.hero {
+  max-width: 448px;
+}
+.hero .main-title,
+.hero .main-subtitle {
+  margin-bottom: 14px;
+}
+
+.main-title {
+  font-size: 64px;
+  color: #3A96EC;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.main-subtitle {
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.hero__desk-text {
+  font-size: 20px;
+}
+
 .header__content {
   display: flex;
   justify-content: space-between;
