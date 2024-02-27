@@ -261,6 +261,44 @@ body {
   border-radius: 10px 40px 60px 100px;
 }
 
+.avatar {
+  width: 629px;
+  height: 575px;
+  position: relative;
+}
+
+.avatar__element {
+  width: 370px;
+  height: 370px;
+  border-radius: 32% 68% 32% 68%/60% 73% 27% 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avatar__element--img {
+  overflow: hidden;
+  z-index: 3;
+}
+
+.avatar__element--first {
+  transform: translate(-50%, -50%) rotate(40deg);
+  background-color: rgba(58, 150, 236, 0.72);
+  z-index: 2;
+}
+
+.avatar__element--second {
+  transform: translate(-50%, -50%) rotate(-40deg);
+  background-color: rgba(206, 206, 206, 0.72);
+}
+
+.avatar__bg {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -293,4 +331,11 @@ body {
   .anchor-link:hover {
     color: #3A96EC;
   }
+}
+
+.welcome__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 72.5px 0;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
