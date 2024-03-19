@@ -299,6 +299,12 @@ body {
   object-fit: contain;
 }
 
+.context-title {
+  font-size: 32px;
+  font-weight: 900px;
+  color: #3A96EC;
+}
+
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -356,6 +362,14 @@ body {
 .about-me__description {
   font-size: 24px;
   max-width: 904px;
+}
+
+.skills__content {
+  padding: 64px 0;
+}
+.skills__content .context-title {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .list-skills {

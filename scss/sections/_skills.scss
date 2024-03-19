@@ -1,8 +1,12 @@
 .skills {
 }
 .skills__content {
-}
-.context-title {
+    padding: 64px 0;
+    
+    .context-title {
+        text-align: center;
+        margin-bottom: 32px ;
+    }
 }
 .list-skills {
     display: flex;
