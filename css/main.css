@@ -356,4 +356,46 @@ body {
 .about-me__description {
   font-size: 24px;
   max-width: 904px;
+}
+
+.list-skills {
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.list-skills__item {
+  list-style-type: none;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1F1E1B;
+  width: 200px;
+  padding: 61px 0 58px;
+}
+.skill-card--html .skill-card__img, .skill-card--css .skill-card__img {
+  width: 114px;
+  height: 128px;
+}
+.skill-card--js .skill-card__img, .skill-card--scss .skill-card__img, .skill-card--git .skill-card__img {
+  width: 128px;
+  height: 128px;
+}
+
+.skill-card__img {
+  display: inline-block;
+}
+
+.skill-card__icon {
+  fill: #F0E3CA;
+}
+
+.skill-card__text {
+  padding: 16px;
+  font-size: 32px;
+  font-family: "Arial Narrow", sans-serif;
 }/*# sourceMappingURL=main.css.map */

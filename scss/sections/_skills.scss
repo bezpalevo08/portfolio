@@ -1,0 +1,50 @@
+.skills {
+}
+.skills__content {
+}
+.context-title {
+}
+.list-skills {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+}
+.list-skills__item {
+    list-style-type: none;
+}
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgSkillCard;
+    width: 200px;
+    padding: 61px 0 58px;
+
+    &--html,
+    &--css {
+        .skill-card__img {
+            width: 114px;
+            height: 128px;
+        }
+    }
+    &--js,
+    &--scss,
+    &--git {
+        .skill-card__img {
+            width: 128px;
+            height: 128px;
+        }
+    }
+}
+.skill-card__img {
+    display: inline-block;
+}
+.skill-card__icon { 
+    fill: $colorText;
+}
+.skill-card__text {
+    padding: 16px;
+    font-size: 32px;
+    font-family: 'Arial Narrow', sans-serif;
+}
