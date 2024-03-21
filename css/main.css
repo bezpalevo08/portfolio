@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: inherit;
 }
 
-ul, ul li {
+ul, ul li, ol, ol li {
   list-style: none;
 }
 
@@ -376,10 +376,6 @@ body {
   display: flex;
   justify-content: center;
   column-gap: 16px;
-}
-
-.list-skills__item {
-  list-style-type: none;
 }
 
 .skill-card {
