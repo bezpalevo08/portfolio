@@ -385,7 +385,8 @@ body {
   justify-content: center;
   background-color: #1F1E1B;
   width: 200px;
-  padding: 61px 0 58px;
+  padding: 61px 0 45px;
+  border-radius: 10px;
 }
 .skill-card--html .skill-card__img, .skill-card--css .skill-card__img {
   width: 114px;

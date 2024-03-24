@@ -20,7 +20,8 @@
     justify-content: center;
     background-color: $bgSkillCard;
     width: 200px;
-    padding: 61px 0 58px;
+    padding: 61px 0 45px;
+    border-radius: 10px;
 
     &--html,
     &--css {
