@@ -301,7 +301,7 @@ body {
 
 .context-title {
   font-size: 32px;
-  font-weight: 900px;
+  font-weight: 700;
   color: #3A96EC;
 }
 
@@ -408,4 +408,23 @@ body {
   padding: 16px;
   font-size: 32px;
   font-family: "Arial Narrow", sans-serif;
+}
+
+.my-works__content {
+  padding: 64px 0;
+}
+.my-works__content .context-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.list-works {
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.project-card {
+  width: 320px;
+  height: 320px;
 }/*# sourceMappingURL=main.css.map */
