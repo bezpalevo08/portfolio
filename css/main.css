@@ -428,4 +428,51 @@ body {
 .project-card {
   width: 320px;
   height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: 320px;
+  height: 320px;
+  background-color: #21201D;
+}
+
+.project-card__title {
+  padding: 40.5px 0 16px;
+  margin: 0 auto;
+  width: 200px;
+  border-bottom: 1px solid #3A96EC;
+}
+.project-card__title .context-title {
+  margin-bottom: 16px;
+}
+
+.project-card__stack {
+  text-align: center;
+}
+
+.project-card__description {
+  max-width: 219px;
+  margin: 0 auto;
+  padding: 16px 0 40.5px;
+}
+
+.project-card__text {
+  margin-bottom: 16px;
+}
+
+.wrapper-link {
+  text-align: center;
+}
+
+.link-see-more {
+  background-color: #32312E;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 4px;
 }/*# sourceMappingURL=main.css.map */
