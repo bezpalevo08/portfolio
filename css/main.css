@@ -431,6 +431,9 @@ body {
   position: relative;
   overflow: hidden;
 }
+.project-card:hover .project-card__info {
+  transform: translateY(0);
+}
 
 .project-card__info {
   position: absolute;
@@ -440,6 +443,7 @@ body {
   width: 320px;
   height: 320px;
   background-color: #21201D;
+  transition: 0.5s;
 }
 
 .project-card__title {

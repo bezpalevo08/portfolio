@@ -20,6 +20,12 @@
     height: 320px;
     position: relative;
     overflow: hidden;
+
+    &:hover {
+        .project-card__info {
+            transform: translateY(0);
+        }
+    }
 }
 .project-card__info {
     position: absolute;
@@ -29,6 +35,7 @@
     width: 320px;
     height: 320px;
     background-color: $bgProjectCardInfo;
+    transition: 0.5s;
 }
 .project-card__title {
     padding: 40.5px 0 16px;
