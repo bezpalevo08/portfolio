@@ -5,3 +5,11 @@
         }
     }
 }
+
+@mixin hoverSkill ($color) {
+    &:hover {
+        .skill-card__icon {
+            fill: $color;
+        }
+    }
+}

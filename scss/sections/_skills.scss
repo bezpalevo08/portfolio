@@ -38,12 +38,28 @@
             height: 128px;
         }
     }
+    &--html {
+        @include hoverSkill ($skillHtml);
+    }
+    &--css {
+        @include hoverSkill ($skillCss3);
+    }
+    &--js {
+        @include hoverSkill ($skillJs);
+    }
+    &--scss {
+        @include hoverSkill ($skillScss);
+    }
+    &--git {
+        @include hoverSkill ($skillGit);
+    }
 }
 .skill-card__img {
     display: inline-block;
 }
 .skill-card__icon { 
     fill: $colorText;
+    transition: 0.4s;
 }
 .skill-card__text {
     padding: 16px;
