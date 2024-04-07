@@ -53,6 +53,8 @@
     &--git {
         @include hoverSkill ($skillGit);
     }
+    &--skill-card__text {
+        @include hoverSkill ($skillHtml);
 }
 .skill-card__img {
     display: inline-block;
@@ -65,4 +67,5 @@
     padding: 16px;
     font-size: 32px;
     font-family: 'Arial Narrow', sans-serif;
+}
 }

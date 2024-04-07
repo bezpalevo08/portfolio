@@ -399,29 +399,47 @@ body {
 .skill-card--html:hover .skill-card__icon {
   fill: #FC490B;
 }
+.skill-card--html:hover .skill-card__text {
+  color: #FC490B;
+}
 .skill-card--css:hover .skill-card__icon {
   fill: #2196F4;
+}
+.skill-card--css:hover .skill-card__text {
+  color: #2196F4;
 }
 .skill-card--js:hover .skill-card__icon {
   fill: #FFDF00;
 }
+.skill-card--js:hover .skill-card__text {
+  color: #FFDF00;
+}
 .skill-card--scss:hover .skill-card__icon {
   fill: #CA669B;
+}
+.skill-card--scss:hover .skill-card__text {
+  color: #CA669B;
 }
 .skill-card--git:hover .skill-card__icon {
   fill: #F25234;
 }
-
-.skill-card__img {
+.skill-card--git:hover .skill-card__text {
+  color: #F25234;
+}
+.skill-card--skill-card__text:hover .skill-card__icon {
+  fill: #FC490B;
+}
+.skill-card--skill-card__text:hover .skill-card__text {
+  color: #FC490B;
+}
+.skill-card .skill-card__img {
   display: inline-block;
 }
-
-.skill-card__icon {
+.skill-card .skill-card__icon {
   fill: #F0E3CA;
   transition: 0.4s;
 }
-
-.skill-card__text {
+.skill-card .skill-card__text {
   padding: 16px;
   font-size: 32px;
   font-family: "Arial Narrow", sans-serif;
