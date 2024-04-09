@@ -346,6 +346,53 @@ body {
   align-items: center;
 }
 
+.footer .logo {
+  margin-bottom: 16px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  column-gap: 64px;
+}
+
+.invite {
+  max-width: 213px;
+}
+
+.invite__description {
+  font-size: 20px;
+}
+
+.contacts .context-title {
+  margin-bottom: 16px;
+}
+
+.contacts-list-big {
+  display: flex;
+  column-gap: 48px;
+}
+
+.contacts-list-small__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.social-link {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.social-link__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.social-link__title {
+  font-size: 24px;
+  color: #3A96EC;
+}
+
 .about-me__content {
   display: flex;
   column-gap: 32px;
