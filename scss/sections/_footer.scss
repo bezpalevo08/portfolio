@@ -1,12 +1,16 @@
 .footer {
     .logo {
         margin-bottom: 16px;
+        display: inline-block;
+        max-width: 165px;
+        padding: 5px 0;
     }
 }
 .footer__content {
     display: flex;
     justify-content: center;
     column-gap: 64px;
+    padding: 64px 0;
 }
 .invite {
     max-width: 213px;
@@ -34,12 +38,17 @@
     display: flex;
     column-gap: 16px;
     align-items: center;
+
+    @include hoverContactLink ($contextColor, $colorText);
 }
 .social-link__icon {
     width: 32px;
     height: 32px;
+    fill: #f0e3ca;
+    transition: 0.4s;
 }
 .social-link__title {
     font-size: 24px;
     color: $contextColor;
+    transition: 0.4s;
 }

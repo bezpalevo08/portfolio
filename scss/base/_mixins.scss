@@ -16,3 +16,14 @@
         }
     }
 }
+
+@mixin hoverContactLink ($colorIcon, $colorText) {
+    &:hover {
+        .social-link__icon {
+            fill: $colorIcon;
+        }
+        .social-link__title {
+            color: $colorText;
+        }
+    }
+}
