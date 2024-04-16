@@ -351,6 +351,12 @@ body {
   padding: 79px 0 72.5px;
   align-items: center;
 }
+@media (max-width: 1120px) {
+  .welcome__content {
+    flex-direction: column;
+    row-gap: 64px;
+  }
+}
 
 .footer .logo {
   margin-bottom: 16px;
