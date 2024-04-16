@@ -313,6 +313,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .header__content {
+    flex-direction: column;
+    row-gap: 25px;
+    padding: 16px 0;
+  }
+}
 .header__content .logo {
   display: inline-block;
   max-width: 146px;

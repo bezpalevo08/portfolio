@@ -7,6 +7,13 @@
     padding: 20.5px 0;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 25px;
+        padding: 16px 0;
+    }
+
     .logo {
         display: inline-block;
         max-width: 146px;
