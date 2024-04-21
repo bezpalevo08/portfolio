@@ -11,7 +11,8 @@
 .list-works {
     display: flex;
     justify-content: center;
-    column-gap: 16px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 .list-works__item {
 }
