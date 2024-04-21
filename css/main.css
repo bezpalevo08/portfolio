@@ -445,9 +445,10 @@ body {
 }
 
 .list-skills {
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  column-gap: 16px;
+  gap: 16px;
 }
 
 .skill-card {
