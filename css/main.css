@@ -364,16 +364,28 @@ body {
   max-width: 165px;
   padding: 5px 0;
 }
+@media (max-width: 690px) {
+  .footer .logo {
+    display: block;
+    margin: 0 auto 16px;
+  }
+}
 
 .footer__content {
   display: flex;
   justify-content: center;
-  column-gap: 64px;
+  gap: 64px;
   padding: 64px 0;
+  flex-wrap: wrap;
 }
 
 .invite {
   max-width: 213px;
+}
+@media (max-width: 690px) {
+  .invite {
+    max-width: 340px;
+  }
 }
 
 .invite__description {
@@ -382,6 +394,13 @@ body {
 
 .contacts .context-title {
   margin-bottom: 16px;
+}
+@media (max-width: 690px) {
+  .contacts .context-title {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 1px;
+  }
 }
 
 .contacts-list-big {
