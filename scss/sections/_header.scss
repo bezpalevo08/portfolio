@@ -14,12 +14,20 @@
         padding: 16px 0;
     }
 
+    @media (max-width: 570px) {
+        flex-direction: row;
+    }
+
     .logo {
         display: inline-block;
         max-width: 146px;
     }
 }
 .header__menu {
+
+    @media (max-width: 570px) {
+        display: none;
+    }
 }
 .header__list {
     display: flex;

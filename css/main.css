@@ -305,6 +305,40 @@ body {
   color: #3A96EC;
 }
 
+.burger {
+  width: 48px;
+  height: 48px;
+  display: none;
+}
+.burger__line {
+  display: block;
+  width: 36px;
+  height: 4px;
+  background-color: #F0E3CA;
+  position: relative;
+}
+.burger__line::before, .burger__line::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 4px;
+  background-color: #F0E3CA;
+  position: absolute;
+}
+.burger__line::before {
+  top: -10px;
+}
+.burger__line::after {
+  bottom: -10px;
+}
+@media (max-width: 570px) {
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -320,9 +354,20 @@ body {
     padding: 16px 0;
   }
 }
+@media (max-width: 570px) {
+  .header__content {
+    flex-direction: row;
+  }
+}
 .header__content .logo {
   display: inline-block;
   max-width: 146px;
+}
+
+@media (max-width: 570px) {
+  .header__menu {
+    display: none;
+  }
 }
 
 .header__list {
