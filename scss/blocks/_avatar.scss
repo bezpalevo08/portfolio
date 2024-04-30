@@ -2,6 +2,8 @@
     width: 629px;
     height: 575px;
     position: relative;
+    background-image: url(../../img/avatar/bg-avatar-big.png);
+    background-repeat: no-repeat;
 }
 .avatar__element {
     width: 370px;
@@ -24,9 +26,4 @@
 .avatar__element--second {
     transform: translate(-50%, -50%) rotate(-40deg);
     background-color: $secondAvatarElement;
-}
-.avatar__bg {
-    height: auto;
-    width: auto;
-    object-fit: contain;
 }
