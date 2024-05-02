@@ -695,6 +695,11 @@ body {
   width: 200px;
   border-bottom: 1px solid #3A96EC;
 }
+@media (max-width: 768px) {
+  .project-card__title {
+    padding: 29.5px 0 16px;
+  }
+}
 .project-card__title .context-title {
   margin-bottom: 16px;
 }
@@ -708,9 +713,19 @@ body {
   margin: 0 auto;
   padding: 16px 0 40.5px;
 }
+@media (max-width: 768px) {
+  .project-card__description {
+    padding: 16px 0 29.5px;
+  }
+}
 
 .project-card__text {
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .project-card__text {
+    font-size: 18px;
+  }
 }
 
 .wrapper-link {
@@ -722,4 +737,9 @@ body {
   padding: 12px 20px;
   display: inline-block;
   border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .link-see-more {
+    padding: 16px 24px;
+  }
 }/*# sourceMappingURL=main.css.map */
