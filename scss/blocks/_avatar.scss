@@ -4,6 +4,12 @@
     position: relative;
     background-image: url(../../img/avatar/bg-avatar-big.png);
     background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        width: 413px;
+        height: 430px;
+        background-image: url(../../img/avatar/bg-avatar-small.png);
+    }
 }
 .avatar__element {
     width: 370px;
@@ -13,6 +19,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: 768px) {
+    width: 279px;
+    height: 277px;
+    }
 }
 .avatar__element--img {
     overflow: hidden;

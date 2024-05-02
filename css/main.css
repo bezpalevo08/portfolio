@@ -282,6 +282,13 @@ body {
   background-image: url(../../img/avatar/bg-avatar-big.png);
   background-repeat: no-repeat;
 }
+@media (max-width: 768px) {
+  .avatar {
+    width: 413px;
+    height: 430px;
+    background-image: url(../../img/avatar/bg-avatar-small.png);
+  }
+}
 
 .avatar__element {
   width: 370px;
@@ -291,6 +298,12 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .avatar__element {
+    width: 279px;
+    height: 277px;
+  }
 }
 
 .avatar__element--img {
@@ -510,10 +523,15 @@ body {
 
 .about-me__content {
   display: flex;
-  column-gap: 32px;
+  gap: 32px;
   padding: 64px 0;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .about-me__content {
+    flex-direction: column;
+  }
 }
 
 .about-me__img {
