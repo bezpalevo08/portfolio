@@ -42,8 +42,17 @@
 .contacts-list-big {
     display: flex;
     column-gap: 48px;
+    flex-wrap: wrap;
+
+    @media (max-width: 414px) {
+    row-gap: 32px;
+    justify-content: center;
+    }
 }
 .contacts-list-big__item {
+    @media (max-width: 414px) {
+    width: 100%;
+    }
 }
 .contacts-list-small {
 }

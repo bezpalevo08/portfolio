@@ -490,6 +490,19 @@ body {
 .contacts-list-big {
   display: flex;
   column-gap: 48px;
+  flex-wrap: wrap;
+}
+@media (max-width: 414px) {
+  .contacts-list-big {
+    row-gap: 32px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 414px) {
+  .contacts-list-big__item {
+    width: 100%;
+  }
 }
 
 .contacts-list-small__item:not(:last-child) {
