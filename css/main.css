@@ -339,6 +339,7 @@ body {
   height: 4px;
   background-color: #F0E3CA;
   position: relative;
+  transition: background-color 0.5s 0s;
 }
 .burger__line::before, .burger__line::after {
   content: "";
@@ -350,9 +351,11 @@ body {
 }
 .burger__line::before {
   top: -10px;
+  transition: transform 0.3s, top 0.3s 0.3s;
 }
 .burger__line::after {
   bottom: -10px;
+  transition: transform 0.3s, bottom 0.3s 0.3s;
 }
 @media (max-width: 570px) {
   .burger {
@@ -362,8 +365,24 @@ body {
   }
 }
 
+.burger.active .burger__line {
+  background-color: transparent;
+}
+.burger.active .burger__line::before {
+  top: 0;
+  transition: top 0.3s, transform 0.3s 0.3s;
+  transform: rotate(45deg);
+}
+.burger.active .burger__line::after {
+  bottom: 0;
+  transition: bottom 0.3s, transform 0.3s 0.3s;
+  transform: rotate(-45deg);
+}
+
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 4;
   background-color: rgba(27, 26, 23, 0.7);
