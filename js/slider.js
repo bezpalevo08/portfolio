@@ -36,18 +36,18 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
         arrayReviews.forEach(element => {
             const slide = document.createElement('div');
 
-            const name = document.createElement('p');
-            name.innerText = element.name;
+            const nameElement = document.createElement('p');
+            nameElement.innerText = element.name;
             
-            const proffesion = document.createElement('p');
-            proffesion.innerText = element.proffesion;
+            const proffesionElement = document.createElement('p');
+            proffesionElement.innerText = element.proffesion;
 
-            const review = document.createElement('p');
-            review.innerText = element.reviewText;
+            const reviewElement = document.createElement('p');
+            reviewElement.innerText = element.reviewText;
 
-            slide.append(name);
-            slide.append(proffesion);
-            slide.append(review);
+            slide.append(nameElement);
+            slide.append(proffesionElement);
+            slide.append(reviewElement);
             elementTrack.append(slide);
         });
     }
