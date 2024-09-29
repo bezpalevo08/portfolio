@@ -53,6 +53,17 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
     }
 }
 
+const creatorOfArrows = (slider) => {
+    const arrowLeft = document.createElement('button');
+    const arrowRight = document.createElement('button');
+
+    arrowLeft.className = 'arrow arrow-left';
+    arrowRight.className = 'arrow arrow-right';
+
+    slider.prepend(arrowLeft);
+    slider.prepend(arrowRight);
+}
+
 const initialSlider = () => {
     const orientirSection = document.querySelector('#myWorks');
 
@@ -68,9 +79,8 @@ const initialSlider = () => {
     track.className = 'slider__track';
     wrapperHidden.append(track);
 
-    creatorOfSlides(reviews, track)
+    creatorOfSlides(reviews, track);
+    creatorOfArrows(slider);
 }
 
 initialSlider();
-
-
