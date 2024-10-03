@@ -64,6 +64,25 @@ const creatorOfArrows = (slider) => {
     slider.prepend(arrowRight);
 }
 
+const creatorOfPagination = (slider, reviewsLength) => {
+    const listButtons = document.createElement('ol');
+    listButtons.className = 'list-buttons';
+
+    let i = 0;
+    while (i < reviewsLength) {
+        const listItem = document.createElement('li');
+        const buttonPagination = document.createElement('button');
+        buttonPagination.className = 'button-pagination';
+
+        listItem.append(buttonPagination);
+        listButtons.append(listItem);
+        
+        i++;
+    }
+
+    slider.append(listButtons);
+}
+
 const initialSlider = () => {
     const orientirSection = document.querySelector('#myWorks');
 
@@ -81,6 +100,7 @@ const initialSlider = () => {
 
     creatorOfSlides(reviews, track);
     creatorOfArrows(slider);
+    creatorOfPagination(slider, reviews.length);
 }
 
 initialSlider();
