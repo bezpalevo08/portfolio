@@ -35,6 +35,7 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
     if (arrayReviews && arrayReviews.length > 0) {
         arrayReviews.forEach(element => {
             const slide = document.createElement('div');
+            slide.className = 'slide';
 
             const nameElement = document.createElement('p');
             nameElement.innerText = element.name;

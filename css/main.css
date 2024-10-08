@@ -379,6 +379,37 @@ body {
   transform: rotate(-45deg);
 }
 
+.slider {
+  width: 65%;
+  margin: 0 auto;
+  background-color: rgb(95, 106, 115);
+}
+
+.slider__wrapper-hidden {
+  overflow: hidden;
+}
+
+.slider__track {
+  display: flex;
+}
+
+.slide {
+  min-width: 100%;
+  background-color: rgb(109, 88, 128);
+}
+
+.list-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button-pagination {
+  width: 12px;
+  height: 6px;
+  background-color: #F0E3CA;
+  border-radius: 10px;
+}
+
 .header {
   position: fixed;
   top: 0;
