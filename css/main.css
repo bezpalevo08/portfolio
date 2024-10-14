@@ -380,6 +380,7 @@ body {
 }
 
 .slider {
+  position: relative;
   width: 65%;
   margin: 0 auto;
   background-color: rgb(95, 106, 115);
@@ -399,6 +400,10 @@ body {
 }
 
 .list-buttons {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
   display: flex;
   gap: 10px;
 }
