@@ -58,8 +58,8 @@ const creatorOfArrows = (slider) => {
     const arrowLeft = document.createElement('button');
     const arrowRight = document.createElement('button');
 
-    arrowLeft.className = 'arrow arrow-left';
-    arrowRight.className = 'arrow arrow-right';
+    arrowLeft.className = 'arrow arrow--left';
+    arrowRight.className = 'arrow arrow--right';
 
     slider.prepend(arrowLeft);
     slider.prepend(arrowRight);

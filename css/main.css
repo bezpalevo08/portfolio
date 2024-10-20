@@ -415,6 +415,25 @@ body {
   border-radius: 10px;
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.arrow--left {
+  left: -47px;
+  background-image: url(../../img/icons/left-arrow.svg);
+}
+.arrow--right {
+  right: -47px;
+  background-image: url(../../img/icons/arrow-right.svg);
+}
+
 .header {
   position: fixed;
   top: 0;

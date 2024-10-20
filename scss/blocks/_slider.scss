@@ -33,3 +33,24 @@
     background-color: $colorText;
     border-radius: 10px;
 }
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--left {
+        left: -47px;
+        background-image: url(../../img/icons/left-arrow.svg);
+    }
+
+    &--right {
+        right: -47px;
+        background-image: url(../../img/icons/arrow-right.svg);
+    }
+}
