@@ -61,6 +61,9 @@ const creatorOfArrows = (slider) => {
     arrowLeft.className = 'arrow arrow--left';
     arrowRight.className = 'arrow arrow--right';
 
+    arrowLeft.setAttribute('data-arrow', 'left');
+    arrowRight.setAttribute('data-arrow', 'right');
+
     slider.prepend(arrowLeft);
     slider.prepend(arrowRight);
 }
@@ -84,10 +87,23 @@ const creatorOfPagination = (slider, reviewsLength) => {
     slider.append(listButtons);
 }
 
+const handlerEvent = (event) => {
+    const isArrowLeft = event.target.closest('[data-arrow="left"]');
+    const isArrowRight = event.target.closest('[data-arrow="right"]');
+
+    if (isArrowLeft) {
+        console.log(isArrowLeft);
+    }
+    else if (isArrowRight) {
+        console.log(isArrowRight);
+    }
+}
+
 const initialSlider = () => {
     const orientirSection = document.querySelector('#myWorks');
 
     const slider = document.createElement('div');
+    slider.id = 'slider';
     slider.className = 'slider';
     orientirSection.after(slider);
     
@@ -102,6 +118,11 @@ const initialSlider = () => {
     creatorOfSlides(reviews, track);
     creatorOfArrows(slider);
     creatorOfPagination(slider, reviews.length);
+
+    slider.addEventListener('click', handlerEvent);
 }
 
 initialSlider();
+
+// 1. дописать обработчик событий
+// 2. двигать слайды
