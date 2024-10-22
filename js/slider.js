@@ -31,6 +31,11 @@ const reviews = [
     }
 ]
 
+let slider = null;
+let track = null;
+let currentWidthMove = null;
+let countSlide = 0;
+
 const creatorOfSlides = (arrayReviews, elementTrack) => {
     if (arrayReviews && arrayReviews.length > 0) {
         arrayReviews.forEach(element => {
@@ -95,14 +100,20 @@ const handlerEvent = (event) => {
         console.log(isArrowLeft);
     }
     else if (isArrowRight) {
-        console.log(isArrowRight);
+        track = slider.querySelector('#track');
+        console.log(track);
+        countSlide += 1;
+        console.log(countSlide);
+        console.log(currentWidthMove);
+        
+        track.style.transform = `translateX(-${countSlide * currentWidthMove}px)`;
     }
 }
 
 const initialSlider = () => {
     const orientirSection = document.querySelector('#myWorks');
 
-    const slider = document.createElement('div');
+    slider = document.createElement('div');
     slider.id = 'slider';
     slider.className = 'slider';
     orientirSection.after(slider);
@@ -111,7 +122,8 @@ const initialSlider = () => {
     wrapperHidden.className = 'slider__wrapper-hidden';
     slider.append(wrapperHidden);
     
-    const track = document.createElement('div');
+    track = document.createElement('div');
+    track.id = 'track';
     track.className = 'slider__track';
     wrapperHidden.append(track);
 
@@ -119,10 +131,13 @@ const initialSlider = () => {
     creatorOfArrows(slider);
     creatorOfPagination(slider, reviews.length);
 
+    currentWidthMove = slider.querySelector('.slide').offsetWidth;
+
     slider.addEventListener('click', handlerEvent);
 }
 
 initialSlider();
 
-// 1. дописать обработчик событий
-// 2. двигать слайды
+// 1. находить ширину слайда
+// 2. создать счётчик слайдов
+// 3. двигать ленту на счётчик*ширина слайда
