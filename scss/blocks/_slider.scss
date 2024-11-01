@@ -11,6 +11,7 @@
 
 .slider__track {
     display: flex;
+    transition: transform 0.4s;
 }
 
 .slide {

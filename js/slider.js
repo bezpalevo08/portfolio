@@ -95,19 +95,29 @@ const creatorOfPagination = (slider, reviewsLength) => {
 const handlerEvent = (event) => {
     const isArrowLeft = event.target.closest('[data-arrow="left"]');
     const isArrowRight = event.target.closest('[data-arrow="right"]');
+    track = slider.querySelector('#track');
 
     if (isArrowLeft) {
-        console.log(isArrowLeft);
+        if (countSlide > 0) {
+            countSlide -= 1;
+            console.log(countSlide);
+        }
+        else {
+            countSlide = reviews.length - 1;
+            console.log(countSlide);
+        }
     }
     else if (isArrowRight) {
-        track = slider.querySelector('#track');
-        console.log(track);
-        countSlide += 1;
-        console.log(countSlide);
-        console.log(currentWidthMove);
-        
-        track.style.transform = `translateX(-${countSlide * currentWidthMove}px)`;
+        if (countSlide < reviews.length - 1) {
+            countSlide += 1;
+            console.log(countSlide);
+        }
+        else {
+            countSlide = 0;
+            console.log(countSlide);
+        }
     }
+    track.style.transform = `translateX(-${countSlide * currentWidthMove}px)`;
 }
 
 const initialSlider = () => {
@@ -137,7 +147,3 @@ const initialSlider = () => {
 }
 
 initialSlider();
-
-// 1. находить ширину слайда
-// 2. создать счётчик слайдов
-// 3. двигать ленту на счётчик*ширина слайда
