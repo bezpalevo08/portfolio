@@ -92,32 +92,30 @@ const creatorOfPagination = (slider, reviewsLength) => {
     slider.append(listButtons);
 }
 
+const motion = () => {
+    track.style.transform = `translateX(-${countSlide * currentWidthMove}px)`;
+}
+
+const choosingDirection = (direction) => {
+    if (direction === 'left') {
+        countSlide = countSlide > 0 ? countSlide -= 1 : reviews.length - 1;
+    } else if (direction === 'right') {
+        countSlide = countSlide < reviews.length - 1 ?  countSlide += 1 : countSlide = 0;
+    }
+}
+
 const handlerEvent = (event) => {
     const isArrowLeft = event.target.closest('[data-arrow="left"]');
     const isArrowRight = event.target.closest('[data-arrow="right"]');
     track = slider.querySelector('#track');
 
     if (isArrowLeft) {
-        if (countSlide > 0) {
-            countSlide -= 1;
-            console.log(countSlide);
-        }
-        else {
-            countSlide = reviews.length - 1;
-            console.log(countSlide);
-        }
+        choosingDirection('left');
     }
     else if (isArrowRight) {
-        if (countSlide < reviews.length - 1) {
-            countSlide += 1;
-            console.log(countSlide);
-        }
-        else {
-            countSlide = 0;
-            console.log(countSlide);
-        }
+        choosingDirection('right');
     }
-    track.style.transform = `translateX(-${countSlide * currentWidthMove}px)`;
+    motion();
 }
 
 const initialSlider = () => {
