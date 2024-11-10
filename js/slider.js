@@ -35,6 +35,7 @@ let slider = null;
 let track = null;
 let currentWidthMove = null;
 let countSlide = 0;
+let listControlButtons = null;
 
 const creatorOfSlides = (arrayReviews, elementTrack) => {
     if (arrayReviews && arrayReviews.length > 0) {
@@ -82,6 +83,7 @@ const creatorOfPagination = (slider, reviewsLength) => {
         const listItem = document.createElement('li');
         const buttonPagination = document.createElement('button');
         buttonPagination.className = 'button-pagination';
+        buttonPagination.setAttribute('data-pagination', 'button');
 
         listItem.append(buttonPagination);
         listButtons.append(listItem);
@@ -107,7 +109,12 @@ const choosingDirection = (direction) => {
 const handlerEvent = (event) => {
     const isArrowLeft = event.target.closest('[data-arrow="left"]');
     const isArrowRight = event.target.closest('[data-arrow="right"]');
+    const isButtonPagination = event.target.closest('[data-pagination="button"]');
     track = slider.querySelector('#track');
+
+    if (isButtonPagination) {
+        countSlide = Array.from(listControlButtons).indexOf(isButtonPagination);
+    }
 
     if (isArrowLeft) {
         choosingDirection('left');
@@ -129,6 +136,7 @@ const initialSlider = () => {
     const wrapperHidden = document.createElement('div');
     wrapperHidden.className = 'slider__wrapper-hidden';
     slider.append(wrapperHidden);
+
     
     track = document.createElement('div');
     track.id = 'track';
@@ -138,6 +146,7 @@ const initialSlider = () => {
     creatorOfSlides(reviews, track);
     creatorOfArrows(slider);
     creatorOfPagination(slider, reviews.length);
+    listControlButtons = slider.querySelectorAll('.button-pagination');
 
     currentWidthMove = slider.querySelector('.slide').offsetWidth;
 
@@ -145,3 +154,10 @@ const initialSlider = () => {
 }
 
 initialSlider();
+
+// 1. переключение слайдов с помощью пагинации
+// 2. переключение стилей для пагинаций
+// 3. свайп
+
+// =============
+// при нажатии на кнопку пагинации получать индекс этой кнопки и передавать его в счетчик
