@@ -75,18 +75,20 @@ const creatorOfArrows = (slider) => {
 }
 
 const creatorOfPagination = (slider, reviewsLength) => {
-    const listButtons = document.createElement('ol');
+    const listButtons = document.createElement('div');
     listButtons.className = 'list-buttons';
 
     let i = 0;
     while (i < reviewsLength) {
-        const listItem = document.createElement('li');
         const buttonPagination = document.createElement('button');
         buttonPagination.className = 'button-pagination';
-        buttonPagination.setAttribute('data-pagination', 'button');
 
-        listItem.append(buttonPagination);
-        listButtons.append(listItem);
+        if (i === 0) {
+            buttonPagination.classList.add('active');
+        }
+
+        buttonPagination.setAttribute('data-pagination', 'button');
+        listButtons.append(buttonPagination);
         
         i++;
     }
@@ -96,6 +98,7 @@ const creatorOfPagination = (slider, reviewsLength) => {
 
 const motion = () => {
     track.style.transform = `translateX(-${countSlide * currentWidthMove}px)`;
+    changeStyleButtonPagination();
 }
 
 const choosingDirection = (direction) => {
@@ -104,6 +107,14 @@ const choosingDirection = (direction) => {
     } else if (direction === 'right') {
         countSlide = countSlide < reviews.length - 1 ?  countSlide += 1 : countSlide = 0;
     }
+}
+
+const changeStyleButtonPagination = () => {
+    const activeButton = slider.querySelector('.button-pagination.active');
+    if (activeButton) {
+        activeButton.classList.remove('active');
+    }
+    listControlButtons[countSlide].classList.add('active');
 }
 
 const handlerEvent = (event) => {
