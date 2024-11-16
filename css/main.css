@@ -398,6 +398,7 @@ body {
 .slide {
   min-width: 100%;
   background-color: rgb(109, 88, 128);
+  user-select: none;
 }
 
 .list-buttons {

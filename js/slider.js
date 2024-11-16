@@ -31,11 +31,15 @@ const reviews = [
     }
 ]
 
+const minMove = 20;
 let slider = null;
 let track = null;
 let currentWidthMove = null;
 let countSlide = 0;
 let listControlButtons = null;
+let startPoint = 0;
+let endPoint = 0;
+let currentMove = 0;
 
 const creatorOfSlides = (arrayReviews, elementTrack) => {
     if (arrayReviews && arrayReviews.length > 0) {
@@ -136,6 +140,24 @@ const handlerEvent = (event) => {
     motion();
 }
 
+const handlerMove = () => {
+    currentMove = startPoint - endPoint;
+
+    if (Math.abs(currentMove) > minMove) {
+        currentMove > 0 ? choosingDirection('right') : choosingDirection('left');
+        motion();
+    }
+}
+
+const startPoindHandler = (e) => {
+    startPoint = e.clientX;
+}
+
+const endPoindHandler = (e) => {
+    endPoint = e.clientX;
+    handlerMove();
+}
+
 const initialSlider = () => {
     const orientirSection = document.querySelector('#myWorks');
 
@@ -162,13 +184,8 @@ const initialSlider = () => {
     currentWidthMove = slider.querySelector('.slide').offsetWidth;
 
     slider.addEventListener('click', handlerEvent);
+    slider.addEventListener('mousedown', startPoindHandler);
+    slider.addEventListener('mouseup', endPoindHandler);
 }
 
 initialSlider();
-
-// 1. переключение слайдов с помощью пагинации
-// 2. переключение стилей для пагинаций
-// 3. свайп
-
-// =============
-// при нажатии на кнопку пагинации получать индекс этой кнопки и передавать его в счетчик
