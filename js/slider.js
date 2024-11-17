@@ -47,18 +47,38 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
             const slide = document.createElement('div');
             slide.className = 'slide';
 
+            const slideHeaderElement = document.createElement('div');
+            slideHeaderElement.className = 'slide__header';
+
+            const avatarElement = document.createElement('img');
+            avatarElement.className = 'slide__avatar';
+            // 1. добавить путь к изображению
+            // 2. стилизовать
+
+            const wrapperInfoElement = document.createElement('div');
+            wrapperInfoElement.className = 'slide__wrapper-info';
+
             const nameElement = document.createElement('p');
+            nameElement.className = 'slide__name';
             nameElement.innerText = element.name;
             
             const proffesionElement = document.createElement('p');
+            proffesionElement.className = 'slide__proffesion';
             proffesionElement.innerText = element.proffesion;
 
             const reviewElement = document.createElement('p');
+            reviewElement.className = 'slide__review';
             reviewElement.innerText = element.reviewText;
 
-            slide.append(nameElement);
-            slide.append(proffesionElement);
+            slide.append(slideHeaderElement);
             slide.append(reviewElement);
+
+            slideHeaderElement.append(avatarElement);
+            slideHeaderElement.append(wrapperInfoElement);
+
+            wrapperInfoElement.append(nameElement);
+            wrapperInfoElement.append(proffesionElement);
+
             elementTrack.append(slide);
         });
     }

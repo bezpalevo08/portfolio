@@ -2,7 +2,6 @@
     position: relative;
     width: 65%;
     margin: 0 auto;
-    background-color: rgb(95, 106, 115);
 }
 
 .slider__wrapper-hidden {
@@ -16,8 +15,10 @@
 
 .slide {
     min-width: 100%;
-    background-color: rgb(109, 88, 128);
+    background-color: $bgSkillCard;
     user-select: none;
+    border-radius: 20px;
+    padding: 15px;
 }
 
 .list-buttons {
@@ -60,5 +61,9 @@
     &--right {
         right: -47px;
         background-image: url(../../img/icons/arrow-right.svg);
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 }
