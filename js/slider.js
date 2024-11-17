@@ -150,11 +150,11 @@ const handlerMove = () => {
 }
 
 const startPoindHandler = (e) => {
-    startPoint = e.clientX;
+    startPoint = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
 }
 
 const endPoindHandler = (e) => {
-    endPoint = e.clientX;
+    endPoint = e.type.includes("mouse") ? e.clientx : e.changedTouches[0].clientX;
     handlerMove();
 }
 
@@ -186,6 +186,8 @@ const initialSlider = () => {
     slider.addEventListener('click', handlerEvent);
     slider.addEventListener('mousedown', startPoindHandler);
     slider.addEventListener('mouseup', endPoindHandler);
+    slider.addEventListener('touchstart', startPoindHandler);
+    slider.addEventListener('touchend', endPoindHandler);
 }
 
 initialSlider();
