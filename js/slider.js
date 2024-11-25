@@ -3,31 +3,31 @@ const reviews = [
         name: 'Иван',
         proffesion: 'фотограф',
         reviewText: 'все было прекрасно.',
-        srcAvatar: '',
+        srcAvatar: './img/reviers/revier-2-man.jpg',
     },
     {
         name: 'Лера',
         proffesion: 'бариста',
         reviewText: 'отличный сайт! сделали в короткие сроки.',
-        srcAvatar: '',
+        srcAvatar: './img/reviers/revier-3-women.jpg',
     },
     {
         name: 'Ирина',
         proffesion: 'художник',
         reviewText: 'все отлично, понравилось',
-        srcAvatar: '',
+        srcAvatar: './img/reviers/revier-4-women.jpg',
     },
     {
         name: 'Кристина',
         proffesion: 'фотограф',
         reviewText: 'прекрасный сайт! все очень понравилось',
-        srcAvatar: '',
+        srcAvatar: './img/reviers/revier-5-women.jpg',
     },
     {
         name: 'Артур',
         proffesion: 'сварщик',
         reviewText: 'заказал сделать сайт для работы. Результатом доволен.',
-        srcAvatar: '',
+        srcAvatar: './img/reviers/revier-1-man.jpg',
     }
 ]
 
@@ -52,8 +52,14 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
 
             const avatarElement = document.createElement('img');
             avatarElement.className = 'slide__avatar';
-            // 1. добавить путь к изображению
+            avatarElement.src = element.srcAvatar;
+            // 1. добавить путь к изображению+
             // 2. стилизовать
+            // 3. красить стрелки при hover (создать через жс)
+            // ПОЧИНИТЬ СВАЙП 
+
+            const wrapperAvatarElement = document.createElement('div');
+            wrapperAvatarElement.className = 'slide__wrapper-avatar';
 
             const wrapperInfoElement = document.createElement('div');
             wrapperInfoElement.className = 'slide__wrapper-info';
@@ -73,7 +79,9 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
             slide.append(slideHeaderElement);
             slide.append(reviewElement);
 
-            slideHeaderElement.append(avatarElement);
+            slideHeaderElement.append(wrapperAvatarElement);
+
+            wrapperAvatarElement.append(avatarElement);
             slideHeaderElement.append(wrapperInfoElement);
 
             wrapperInfoElement.append(nameElement);

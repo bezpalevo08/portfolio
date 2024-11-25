@@ -400,6 +400,15 @@ body {
   user-select: none;
   border-radius: 20px;
   padding: 15px;
+  user-select: none;
+}
+
+.slide__wrapper-avatar {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #3A96EC;
 }
 
 .list-buttons {
