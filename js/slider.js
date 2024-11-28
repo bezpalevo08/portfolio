@@ -168,7 +168,6 @@ const handlerEvent = (event) => {
 
 const handlerMove = () => {
     currentMove = startPoint - endPoint;
-
     if (Math.abs(currentMove) > minMove) {
         currentMove > 0 ? choosingDirection('right') : choosingDirection('left');
         motion();
@@ -180,7 +179,7 @@ const startPoindHandler = (e) => {
 }
 
 const endPoindHandler = (e) => {
-    endPoint = e.type.includes("mouse") ? e.clientx : e.changedTouches[0].clientX;
+    endPoint = e.type.includes("mouse") ? e.clientX : e.changedTouches[0].clientX;
     handlerMove();
 }
 
