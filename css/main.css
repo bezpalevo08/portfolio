@@ -403,6 +403,20 @@ body {
   user-select: none;
 }
 
+.slide__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 13px;
+}
+
+.slide__name {
+  font-size: 22px;
+  color: #3A96EC;
+  font-weight: 600;
+}
+
 .slide__wrapper-avatar {
   width: 80px;
   height: 80px;

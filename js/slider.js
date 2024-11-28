@@ -1,32 +1,32 @@
 const reviews = [
     {
-        name: 'Иван',
-        proffesion: 'фотограф',
-        reviewText: 'все было прекрасно.',
+        name: 'Ivan',
+        proffesion: 'Photographer',
+        reviewText: 'I was very pleased with the services of web developer. He quickly created a website for me that works perfectly and looks modern. I was satisfied with the result.',
         srcAvatar: './img/reviers/revier-2-man.jpg',
     },
     {
-        name: 'Лера',
-        proffesion: 'бариста',
-        reviewText: 'отличный сайт! сделали в короткие сроки.',
+        name: 'Lera',
+        proffesion: 'barista',
+        reviewText: 'Amazing work! The website is fast, responsive, and beautifully designed.',
         srcAvatar: './img/reviers/revier-3-women.jpg',
     },
     {
-        name: 'Ирина',
-        proffesion: 'художник',
-        reviewText: 'все отлично, понравилось',
+        name: 'Irina',
+        proffesion: 'artist',
+        reviewText: 'Highly professional and detail-oriented. Delivered the project on time with outstanding results.',
         srcAvatar: './img/reviers/revier-4-women.jpg',
     },
     {
-        name: 'Кристина',
-        proffesion: 'фотограф',
-        reviewText: 'прекрасный сайт! все очень понравилось',
+        name: 'Kristina',
+        proffesion: 'Photographer',
+        reviewText: 'Great communication throughout the process. The final product exceeded all expectations!',
         srcAvatar: './img/reviers/revier-5-women.jpg',
     },
     {
-        name: 'Артур',
-        proffesion: 'сварщик',
-        reviewText: 'заказал сделать сайт для работы. Результатом доволен.',
+        name: 'Artur',
+        proffesion: 'welder',
+        reviewText: 'Impressive coding skills and creativity. The functionality and design are exactly what we needed.',
         srcAvatar: './img/reviers/revier-1-man.jpg',
     }
 ]
@@ -53,8 +53,6 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
             const avatarElement = document.createElement('img');
             avatarElement.className = 'slide__avatar';
             avatarElement.src = element.srcAvatar;
-            // 1. добавить путь к изображению+
-            // 2. стилизовать
             // 3. красить стрелки при hover (создать через жс)
             // ПОЧИНИТЬ СВАЙП 
 
