@@ -451,17 +451,21 @@ body {
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .arrow--left {
   left: -47px;
-  background-image: url(../../img/icons/left-arrow.svg);
 }
 .arrow--right {
   right: -47px;
-  background-image: url(../../img/icons/arrow-right.svg);
+}
+.arrow__icon {
+  transition: 0.4s;
+  fill: #F0E3CA;
+}
+@media (hover: hover) {
+  .arrow:hover .arrow__icon {
+    fill: #3A96EC;
+  }
 }
 @media (max-width: 768px) {
   .arrow {

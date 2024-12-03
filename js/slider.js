@@ -53,8 +53,6 @@ const creatorOfSlides = (arrayReviews, elementTrack) => {
             const avatarElement = document.createElement('img');
             avatarElement.className = 'slide__avatar';
             avatarElement.src = element.srcAvatar;
-            // 3. красить стрелки при hover (создать через жс)
-            // ПОЧИНИТЬ СВАЙП 
 
             const wrapperAvatarElement = document.createElement('div');
             wrapperAvatarElement.className = 'slide__wrapper-avatar';
@@ -99,6 +97,20 @@ const creatorOfArrows = (slider) => {
 
     arrowLeft.setAttribute('data-arrow', 'left');
     arrowRight.setAttribute('data-arrow', 'right');
+
+    const spriteLeft = `
+    <svg class="arrow__icon">
+        <use xlink:href = "#arrowLeft"></use>
+    </svg>
+    `;
+    const spriteRight = `
+    <svg class="arrow__icon">
+        <use xlink:href = "#arrowRight"></use>
+    </svg>
+    `;
+
+    arrowLeft.insertAdjacentHTML('beforeend', spriteLeft);
+    arrowRight.insertAdjacentHTML('beforeend', spriteRight);
 
     slider.prepend(arrowLeft);
     slider.prepend(arrowRight);
