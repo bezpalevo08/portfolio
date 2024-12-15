@@ -12,6 +12,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;900&display=swap" rel="stylesheet">
       <script src="./js/mobile-menu.js" defer="defer"></script>
       <script src="./js/slider.js" defer="defer"></script>
+      <script src="./js/skill-animation.js" defer="defer"></script>
    </head>
    <body> 
       <svg display = 'none'>
@@ -149,15 +150,16 @@
             </div>
          </section> 
       <section class="skills" id="skills">
+         <!-- создать фейд блок(просто div) -->
             <div class="container">
                <div class="skills__content">
                   <h6 class="context-title">
                      My Skills
                   </h6>
-                  <ol class="list-skills">
+                  <ol class="list-skills" id="listSkills">
                      <li class="list-skills__item">  
-                        <button class="skill-card skill-card--html">
-                           <span class="skill-card__front">
+                        <button class="skill-card skill-card--html" data-skill-card>
+                           <span class="skill-card__front" >
                               <span class="skill-card__img">
                                  <svg class="skill-card__icon">
                                     <use xlink:href = "#html-icon"></use>
@@ -168,12 +170,12 @@
                               </span>
                            </span>
                            <span class="skill-card__back">
-                              <span class="skill-card__cross"></span>
+                              <span class="skill-card__cross" data-cross></span>
                            </span>
                         </button>
                      </li>
                      <li class="list-skills__item">  
-                        <button class="skill-card skill-card--css">
+                        <button class="skill-card skill-card--css" data-skill-card>
                            <span class="skill-card__front">
                               <span class="skill-card__img">
                                  <svg class="skill-card__icon">
@@ -185,12 +187,12 @@
                               </span>
                            </span>
                            <span class="skill-card__back">
-                              <span class="skill-card__cross"></span>
+                              <span class="skill-card__cross" data-cross></span>
                            </span>
                         </button>
                      </li>
                      <li class="list-skills__item">  
-                        <button class="skill-card skill-card--js">
+                        <button class="skill-card skill-card--js" data-skill-card>
                            <span class="skill-card__front">
                               <span class="skill-card__img">
                                  <svg class="skill-card__icon">
@@ -202,12 +204,12 @@
                               </span>
                            </span>
                            <span class="skill-card__back">
-                              <span class="skill-card__cross"></span>
+                              <span class="skill-card__cross" data-cross></span>
                            </span>
                         </button>
                      </li>
                      <li class="list-skills__item">  
-                        <button class="skill-card skill-card--scss">
+                        <button class="skill-card skill-card--scss" data-skill-card>
                            <span class="skill-card__front">
                               <span class="skill-card__img">
                                  <svg class="skill-card__icon">
@@ -219,12 +221,12 @@
                               </span>
                            </span>
                            <span class="skill-card__back">
-                              <span class="skill-card__cross"></span>
+                              <span class="skill-card__cross" data-cross></span>
                            </span>
                         </button>
                      </li>
                      <li class="list-skills__item">  
-                        <button class="skill-card skill-card--git">
+                        <button class="skill-card skill-card--git" data-skill-card>
                            <span class="skill-card__front">
                               <span class="skill-card__img">
                                  <svg class="skill-card__icon">
@@ -236,7 +238,7 @@
                               </span>
                            </span>
                            <span class="skill-card__back">
-                              <span class="skill-card__cross"></span>
+                              <span class="skill-card__cross" data-cross></span>
                            </span>
                         </button>
                      </li>
