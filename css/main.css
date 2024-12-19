@@ -720,9 +720,10 @@ body {
 .skill-card__back {
   position: absolute;
   color: rgb(255, 255, 255);
-  background-color: rgb(34, 85, 179);
+  background-color: rgba(31, 30, 27, 0.909);
   transform: perspective(600px) rotateY(180deg);
   border-radius: 10px;
+  backdrop-filter: blur(5px);
 }
 .skill-card__front {
   display: flex;
@@ -857,7 +858,7 @@ body {
   transition: background-color 0.6s, backdrop-filter 0.6s, z-index 0.6s 0s;
 }
 .fade-block.active {
-  background-color: rgba(58, 150, 236, 0.866);
+  background-color: rgba(58, 150, 236, 0.501);
   backdrop-filter: blur(5px);
   z-index: 4;
   transition: background-color 0.6s, backdrop-filter 0.6s, z-index 0s 0s;
