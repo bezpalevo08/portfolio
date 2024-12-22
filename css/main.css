@@ -5,6 +5,10 @@
   border: none;
 }
 
+body.block {
+  overflow: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -683,10 +687,6 @@ body {
   max-width: 904px;
 }
 
-.skills {
-  position: relative;
-}
-
 .skills__content {
   padding: 64px 0;
 }
@@ -724,6 +724,11 @@ body {
   transform: perspective(600px) rotateY(180deg);
   border-radius: 10px;
   backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  line-height: 1.4;
 }
 .skill-card__front {
   display: flex;
@@ -829,8 +834,12 @@ body {
   }
 }
 
+.slill-card__description {
+  font-size: 23px;
+}
+
 .skill-card.active {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateY(0deg);
