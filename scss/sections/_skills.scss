@@ -19,6 +19,11 @@
     position: relative;
     width: 200px;
     height: 300px;
+
+    @media (max-width: 768px) {
+        height: 60px;
+        width: 285px;
+    }
     &__front,
     &__back{
     width: 100%;
@@ -55,26 +60,33 @@
         border-radius: 10px;
         gap: 16px;
         transform: perspective(600px) rotateY(0deg);
+
+        @media (max-width: 768px) {
+            flex-direction: row;
+            padding: 14px 36px;
+            justify-content: flex-start;
+        }
     }
 
     &__cross {
-        background-image: url(../../img/icons/cross.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
         width: 30px;
         height: 30px;
         display: block;
         position: absolute;
         top: 10px;
         right: 10px;
+
+        &:hover {
+            .cross-icon {
+                stroke: $contextColor;
+            }
+        }
     }
 
-    @media (max-width: 768px) {
-        flex-direction: row;
-        width: 285px;
-        padding: 14px 36px;
-        justify-content: flex-start;
+    .cross-icon {
+        stroke: #fff;
     }
+
     &--html,
     &--css {
         .skill-card__img {
@@ -138,15 +150,24 @@
 
 .slill-card__description {
     font-size: 23px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 }
 .skill-card.active{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotateY(0deg);
-    min-width: 500px;
+    max-width: 500px;
     min-height: 400px;
+    width: 100%;
     z-index: 5;
+
+    @media (max-width: 768px) {
+        width: 95%;
+    }
 }
 
 .skill-card.active .skill-card__front{
