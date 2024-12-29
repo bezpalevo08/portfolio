@@ -293,6 +293,12 @@ body {
     background-image: url(../../img/avatar/bg-avatar-small.png);
   }
 }
+@media (max-width: 430px) {
+  .avatar {
+    width: 290px;
+    height: 300px;
+  }
+}
 
 .avatar__element {
   width: 370px;
@@ -307,6 +313,12 @@ body {
   .avatar__element {
     width: 279px;
     height: 277px;
+  }
+}
+@media (max-width: 410px) {
+  .avatar__element {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -629,7 +641,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 410px) {
+@media (max-width: 425px) {
   .contacts-list {
     flex-direction: column;
     align-items: center;

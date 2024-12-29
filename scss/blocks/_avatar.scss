@@ -10,6 +10,10 @@
         height: 430px;
         background-image: url(../../img/avatar/bg-avatar-small.png);
     }
+    @media (max-width: 430px) {
+        width: 290px;
+        height: 300px;
+    }
 }
 .avatar__element {
     width: 370px;
@@ -23,6 +27,11 @@
     @media (max-width: 768px) {
     width: 279px;
     height: 277px;
+    }
+
+    @media (max-width: 410px) {
+        width: 200px;
+        height: 200px;
     }
 }
 .avatar__element--img {
