@@ -388,6 +388,11 @@ body {
   width: 65%;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .slider {
+    width: 90%;
+  }
+}
 
 .slider__wrapper-hidden {
   overflow: hidden;
