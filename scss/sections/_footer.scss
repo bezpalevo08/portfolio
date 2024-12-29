@@ -39,25 +39,42 @@
         }
     }
 }
-.contacts-list-big {
-    display: flex;
-    column-gap: 48px;
-    flex-wrap: wrap;
+// .contacts-list-big {
+//     display: flex;
+//     column-gap: 48px;
+//     flex-wrap: wrap;
 
-    @media (max-width: 414px) {
-    row-gap: 32px;
-    justify-content: center;
+//     @media (max-width: 414px) {
+//     row-gap: 32px;
+//     justify-content: center;
+//     }
+// }
+// .contacts-list-big__item {
+//     @media (max-width: 414px) {
+//     width: 100%;
+//     }
+// }
+// .contacts-list-small {
+// }
+// .contacts-list-small__item:not(:last-child) {
+//     margin-bottom: 32px;
+// }
+.contacts-list {
+    max-width: 380px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 410px) {
+        flex-direction: column;
+        align-items: center;
+        
+        &__item {
+            min-width: 204px;
+        }
     }
-}
-.contacts-list-big__item {
-    @media (max-width: 414px) {
-    width: 100%;
-    }
-}
-.contacts-list-small {
-}
-.contacts-list-small__item:not(:last-child) {
-    margin-bottom: 32px;
+
 }
 .social-link {
     display: flex;
