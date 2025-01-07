@@ -159,7 +159,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateY(0deg);
+    transform: translate(-50%, -50%) rotateY(0deg) !important;
     max-width: 500px;
     min-height: 400px;
     width: 100%;

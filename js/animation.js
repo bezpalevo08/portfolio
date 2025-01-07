@@ -30,3 +30,17 @@ gsap.from('#aboutText',{
         scrub: 3,
     }
 })
+
+gsap.from('[data-skill-card]',{
+    stagger:0.3,
+    opacity:0,
+    // y:200,
+    scale: 0,
+    scrollTrigger:{
+        // markers: true,
+        trigger: '#listSkills',
+        start: 'top 70%',
+        end:'30% 50%',
+        scrub: 2,
+    }
+})
