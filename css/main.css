@@ -138,6 +138,7 @@ footer{
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  overflow: hidden;
 }
 
 /* Utility */
@@ -993,4 +994,12 @@ body {
   .link-see-more {
     padding: 16px 24px;
   }
+}
+
+.reviews__content {
+  padding: 64px 0;
+}
+.reviews__content .context-title {
+  text-align: center;
+  margin-bottom: 32px;
 }/*# sourceMappingURL=main.css.map */

@@ -196,12 +196,12 @@ const endPoindHandler = (e) => {
 }
 
 const initialSlider = () => {
-    const orientirSection = document.querySelector('#myWorks');
+    const orientirSection = document.querySelector('#reviewsContent');
 
     slider = document.createElement('div');
     slider.id = 'slider';
     slider.className = 'slider';
-    orientirSection.after(slider);
+    orientirSection.append(slider);
     
     const wrapperHidden = document.createElement('div');
     wrapperHidden.className = 'slider__wrapper-hidden';
