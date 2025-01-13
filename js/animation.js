@@ -44,3 +44,17 @@ gsap.from('[data-skill-card]',{
         scrub: 2,
     }
 })
+
+gsap.from('[data-card-project]',{
+    stagger:0.3,
+    opacity:0,
+    x:-400,
+    scale: 0,
+    scrollTrigger:{
+        // markers: true,
+        trigger: '#myWorks',
+        start: 'top 70%',
+        end:'30% 50%',
+        scrub: 4,
+    }
+})
