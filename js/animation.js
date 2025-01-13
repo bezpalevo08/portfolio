@@ -58,3 +58,16 @@ gsap.from('[data-card-project]',{
         scrub: 4,
     }
 })
+
+gsap.from('#reviewsContent',{
+    opacity:0,
+    // y:200,
+    scale: 0,
+    scrollTrigger:{
+        // markers: true,
+        trigger: '#reviews',
+        start: 'top 70%',
+        end:'30% 50%',
+        scrub: 2,
+    }
+})

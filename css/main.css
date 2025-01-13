@@ -996,10 +996,11 @@ body {
   }
 }
 
-.reviews__content {
-  padding: 64px 0;
-}
-.reviews__content .context-title {
+.reviews .context-title {
   text-align: center;
   margin-bottom: 32px;
+}
+
+.reviews__content {
+  padding: 64px 0;
 }/*# sourceMappingURL=main.css.map */
