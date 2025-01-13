@@ -71,3 +71,29 @@ gsap.from('#reviewsContent',{
         scrub: 2,
     }
 })
+
+gsap.from('#invite',{
+    opacity:0,
+    x:-400,
+    scale: 0,
+    scrollTrigger:{
+        // markers: true,
+        trigger: '#contacts',
+        start: '60% 90%',
+        end:'60% 90%',
+        scrub: 2,
+    }
+})
+
+gsap.from('#contactsList',{
+    opacity:0,
+    x:400,
+    scale: 0,
+    scrollTrigger:{
+        // markers: true,
+        trigger: '#contacts',
+        start: '60% 90%',
+        end:'60% 90%',
+        scrub: 2,
+    }
+})

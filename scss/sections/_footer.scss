@@ -14,7 +14,7 @@
 .footer__content {
     display: flex;
     justify-content: center;
-    gap: 64px;
+    gap: 80px;
     padding: 64px 0;
     flex-wrap: wrap;
 }
@@ -41,15 +41,12 @@
 }
 
 .contacts-list {
-    max-width: 380px;
     display: flex;
     gap: 32px;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: column;
 
     @media (max-width: 425px) {
-        flex-direction: column;
-        align-items: center;
 
         &__item {
             min-width: 204px;
