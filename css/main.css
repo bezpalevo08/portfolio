@@ -234,6 +234,14 @@ body {
   color: #F0E3CA;
 }
 
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .hero {
   max-width: 448px;
 }
@@ -330,13 +338,19 @@ body {
 
 .avatar__element--first {
   transform: translate(-50%, -50%) rotate(40deg);
-  background-color: rgba(60, 151, 236, 0.722);
+  background-color: hsla(209, 82%, 58%, 0.5);
   z-index: 2;
+  animation: rotation 6s ease-in-out infinite;
+  backdrop-filter: blur(8px);
+  filter: blur(20px);
 }
 
 .avatar__element--second {
   transform: translate(-50%, -50%) rotate(-40deg);
-  background-color: rgba(206, 206, 206, 0.72);
+  background-color: rgba(206, 206, 206, 0.5);
+  animation: rotation 8s linear infinite;
+  backdrop-filter: blur(3px);
+  filter: blur(20px);
 }
 
 .context-title {
